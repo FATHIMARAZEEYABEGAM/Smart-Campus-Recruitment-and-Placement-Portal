@@ -1,0 +1,10 @@
+[build]
+  command = "npm install --prefix frontend && npm run build --prefix frontend"
+  publish = "frontend/dist"
+  functions = "netlify/functions"
+
+# Single-page app: send client-side routes to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

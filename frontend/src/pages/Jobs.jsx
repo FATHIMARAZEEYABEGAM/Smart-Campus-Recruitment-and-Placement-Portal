@@ -12,7 +12,7 @@ function Jobs() {
     const fetchJobs = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/jobs"
+          "/api/jobs"
         );
 
         if (!response.ok) {
@@ -26,7 +26,7 @@ function Jobs() {
         console.error(error);
 
         setError(
-          "Unable to load jobs. Please make sure the backend is running."
+          "Unable to load jobs. Please try again later."
         );
       } finally {
         setLoading(false);
