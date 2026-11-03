@@ -36,7 +36,7 @@ function Login() {
     try {
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/login",
+        "/api/auth/login",
         {
           method: "POST",
 
@@ -92,7 +92,7 @@ function Login() {
     } catch (error) {
 
       setError(
-        "Unable to connect to the server. Please make sure the backend is running."
+        "Unable to connect to the server. Please try again later."
       );
 
     }

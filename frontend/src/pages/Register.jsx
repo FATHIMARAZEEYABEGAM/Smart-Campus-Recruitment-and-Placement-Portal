@@ -29,7 +29,7 @@ function Register() {
     try {
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/register",
+        "/api/auth/register",
         {
           method: "POST",
 
@@ -60,7 +60,7 @@ function Register() {
     } catch (error) {
 
       setError(
-        "Unable to connect to the server. Please make sure the backend is running."
+        "Unable to connect to the server. Please try again later."
       );
 
     }
